@@ -46,9 +46,7 @@ class Song
       song_title = row.split(", ")
       artist_name = rows[0]
       song_title = rows[1]
-      company = rows[2]
-      person = Person.new
-      person.name = name
+      song = self.create 
       song.name = name
       song.artist_name = artist_name
       song
