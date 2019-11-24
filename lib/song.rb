@@ -41,17 +41,17 @@ class Song
   end
   
   def self.new_from_filename(file)
-    rows = csv_data.split("\n")
-    people = rows.collect do |row|
-      data = row.split(", ")
-      name = data[0]
-      age = data[1]
-      company = data[2]
+    rows = filename.split(" - ")
+    artist_name = rows.collect do |row|
+      song_title = row.split(", ")
+      artist_name = rows[0]
+      song_title = rows[1]
+      company = rows[2]
       person = Person.new
       person.name = name
-      person.age = age
-      person.company = company
-      person
+      song.name = name
+      song.artist_name = artist_name
+      song
    end
   
   def self.create_from_filename(file)
