@@ -45,7 +45,7 @@ class Song
     artist_name = rows.collect do |row|
       song_title = row
       artist_name = rows[0]
-      song_title = rows[1]
+      song_title = rows[1].sub(".mp3", "")
       song = self.create 
       song.name = name
       song.artist_name = artist_name
