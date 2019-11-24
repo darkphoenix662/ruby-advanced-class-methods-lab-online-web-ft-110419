@@ -45,7 +45,7 @@ class Song
       artist_name = rows[0]
       name = rows[1].sub(".mp3", "")
       song = self.new 
-      song.name = song_title
+      song.name = name
       song.artist_name = artist_name
       song
  end
