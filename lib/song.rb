@@ -40,8 +40,8 @@ class Song
     self.all.sort_by{|n| n.name}     #passingRubGuidVid
   end
   
-  def self.new_from_filename(file)
-    parts = file.split("-")
+  def self.new_from_filename(filename)
+    parts = filename.split("-")
       artist_name = parts[0]
       name = parts[1].sub(".mp3", "")
       song = self.new 
