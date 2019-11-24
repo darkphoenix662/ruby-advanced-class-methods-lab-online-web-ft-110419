@@ -46,13 +46,13 @@ class Song
       data = row.split(", ")
       name = data[0]
       age = data[1]
-  company = data[2]
-  person = Person.new
-  person.name = name
-  person.age = age
-  person.company = company
-  person
-  end
+      company = data[2]
+      person = Person.new
+      person.name = name
+      person.age = age
+      person.company = company
+      person
+   end
   
   def self.create_from_filename(file)
     
