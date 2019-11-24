@@ -51,7 +51,13 @@ class Song
  end
   
   def self.create_from_filename(file)
-    
+    rows = file.split(" - ")
+      artist_name = rows[0]
+      song_title = rows[1].sub(".mp3", "")  #passingDigiOcean
+      song = self.create 
+      song.name = song_title
+      song.artist_name = artist_name
+      song
   end
   
   def self.destroy_all
